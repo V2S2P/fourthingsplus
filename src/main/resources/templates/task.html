@@ -9,13 +9,16 @@
 
 <body>
 
+<header>
+    <a href="index.html" th:href="@{/}">
+        <img th:src="@{/images/fourthingsplus.png}" width="25%"/>
+    </a>
+</header>
 <h1>Welcome, <span th:text="${session.currentUser.username}"></span> </h1>
 
-<h2>Your tasks</h2>
+<h2>Doing</h2>
 
-her er de..
-
-<table>
+<table class="task-table">
     <thead>
         <tr>
             <th>Item</th>
@@ -29,6 +32,9 @@ her er de..
         </tr>
     </tbody>
 </table>
+<p th:if="${session.currentUser != null}">
+    <a href="index.html" th:href="@{/logout}">Logout</a>
+</p>
 
 </body>
 </html>

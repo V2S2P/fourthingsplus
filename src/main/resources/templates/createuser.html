@@ -16,8 +16,10 @@
 
 <form class="login-form" method="post"> <!--We use "post" instead of "get" because using "get" will send the login details to the url-->
     <input type="text" name="username" placeholder="Enter your username"/>
-    <input type="password" name="password" placeholder="Enter your password">
-    <button type="submit" formaction="/login">Get access to my mind</button>
+    <input type="password" name="password1" placeholder="Enter your password">
+    <input type="password" name="password2" placeholder="Enter your password again">
+
+    <button type="submit" formaction="/createuser">Create user</button>
 
 
     <div><p th:text="${message}"></p></div>
@@ -27,7 +29,7 @@
     <span th:text="${session.currentUser.username}"></span> |
     <a href="index.html" th:href="@{/logout}">Logout</a>
 </div>
-<p><a href="createuser.html" th:href="@{/createuser}">Create user</a> </p>
+<!--<p><a href="createuser.html" th:href="@{/createuser}">Create user</a> </p>-->
 
 </body>
 </html>
