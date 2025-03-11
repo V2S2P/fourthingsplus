@@ -3,6 +3,7 @@ package org.example;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinThymeleaf;
 import org.example.config.ThymeleafConfig;
+import org.example.controllers.TaskController;
 import org.example.controllers.UserController;
 import org.example.persistence.ConnectionPool;
 
@@ -28,5 +29,6 @@ public class Main {
 
         app.get("/", ctx ->  ctx.render("index.html"));
         UserController.addRoutes(app, connectionPool);
+        TaskController.addRoutes(app, connectionPool);
     }
 }

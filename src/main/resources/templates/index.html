@@ -14,11 +14,11 @@
 </a>
 </header>
 
-<form class="login-form" method="post"> <!--We use "post" instead of "get" because using "get" will send the login details to the url-->
+<form class="generic-form" method="post"> <!--We use "post" instead of "get" because using "get" will send the login details to the url-->
     <input type="text" name="username" placeholder="Enter your username"/>
     <input type="password" name="password" placeholder="Enter your password">
-    <button type="submit" formaction="/login">Get access to my mind</button>
 
+    <button type="submit" formaction="/login">Get access to my mind</button>
 
     <div><p th:text="${message}"></p></div>
 </form>

@@ -34,3 +34,17 @@ h1 {
     background-color: darkgreen;
     color: white;
 }
+.generic-form button:hover {
+    background-color: lightgreen;
+}
+.generic-form button {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+}
+.generic-form input[type=text], .generic-form input[type=password] {
+    padding: 10px;
+    font-size: 1.2rem;
+}
